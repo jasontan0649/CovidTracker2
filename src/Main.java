@@ -4,11 +4,12 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
-        Customer.Deserialize();
-        Customer test = new Customer("Tedst", "2", "2", "Normal");
+        Shop.Deserialize();
+        Shop test = new Shop("KFC Puchong", "delicious", "0380802323", "Normal", "Ben");
+        for (Shop s : Shop.shops)
+            System.out.println(s);
 
-        for (Customer cust : Customer.custs)
-            System.out.println(cust);
+
 
         /*
         DataContainer test = new DataContainer();

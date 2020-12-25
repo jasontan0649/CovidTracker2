@@ -21,6 +21,8 @@ public class Shop implements Serializable, Role{
         setPhone(phone);
         setStatus(status);
         setManager(manager);
+        shops.add(this);
+        Serialize();
     }
 
     private static void Serialize() {
@@ -99,7 +101,15 @@ public class Shop implements Serializable, Role{
         this.manager = manager;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Shop{" +
+                "id=" + id +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", phone='" + phone + '\'' +
+                ", status='" + status + '\'' +
+                ", manager='" + manager + '\'' +
+                '}';
+    }
 }
