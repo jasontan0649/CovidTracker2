@@ -5,7 +5,7 @@ public class Main {
 
     public static void main(String[] args) {
         Customer.Deserialize();
-        Customer test = new Customer("Test", "2", "2", "Normal");
+        Customer test = new Customer("Tedst", "2", "2", "Normal");
 
         for (Customer cust : Customer.custs)
             System.out.println(cust);
