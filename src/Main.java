@@ -11,7 +11,8 @@ public class Main {
                 cust = Menu.login();
             else if (choice == 2)
                 cust = Menu.signUp();
-
+            //Debug
+            System.out.println(cust);
         }
     }
 }

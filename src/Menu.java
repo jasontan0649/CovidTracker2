@@ -30,8 +30,16 @@ public class Menu {
     }
 
     public static Customer signUp() {
-        Customer cust = Customer.custs.get(0); //test
-        return cust;
+        String name, phone, password;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Please enter name ");
+        name = input.nextLine();
+        System.out.println("Please enter phone ");
+        phone = input.nextLine();
+        System.out.println("Please enter password ");
+        password = input.nextLine();
+        Customer c = new Customer(name, password, phone, "Normal");
+        return c;
     }
 
 }
