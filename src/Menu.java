@@ -44,9 +44,23 @@ public class Menu {
     }
 
     public static void main (Customer c) {
-        System.out.println("Welcome, " + c.getName() + "/n");
-        System.out.println("Please select");
-        //here
-    }
+        while (true) {
+            System.out.println("Welcome, " + c.getName() + "/n");
+            System.out.println("Please select");
+            System.out.println("1. Check In");
+            System.out.println("2. View History");
+            System.out.println("3. View Status");
+            System.out.println("4. LogOut");
 
+            int res = Input.inputRange(1,4);
+            switch (res) {
+                case 1 : System.out.println("Check in function");
+                case 2 : System.out.println("View History function");
+                case 3 : System.out.println("View status function");
+                case 4 : return;
+            }
+
+            //done
+        }
+    }
 }
