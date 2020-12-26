@@ -4,36 +4,17 @@ import java.util.HashMap;
 public class Main {
 
     public static void main(String[] args) {
-        Initializer.init(); //Deserialize aka load all the data
+        Initializer.init(); //Deserialize aka load all the dat
 
-       /*
-        Shop.Deserialize();
-        Shop test = new Shop("KFC Puchong", "delicious", "0380802323", "Normal", "Ben");
-        for (Shop s : Shop.shops)
-            System.out.println(s);
+        Customer c1 = new Customer("T","1","2","N");
+        Shop c2 = new Shop("n","2","2","s","w");
+        Visit n1 = new Visit(c1.getId(),1);
+        Visit n2 = new Visit(c1.getId(),1);
+        Visit n3 = new Visit(c1.getId(),1);
 
-        */
-        Visit test = new Visit(4,3);
-        for (Visit v : Visit.visits)
-            System.out.println(v + ", " + v.getTime() + ", " + v.getDate());
-
-
-
-        /*
-        DataContainer test = new DataContainer();
-        test.metadata.add("ID");
-        test.metadata.add("Name");
-        test.data.add(new HashMap<String, String>());
-        test.data.get(0).put("ID", "1");
-        test.data.get(0).put("Name", "Jason");
-        test.data.add(new HashMap<String, String>());
-        test.data.get(1).put("ID", "2");
-        test.data.get(1).put("Name", "Johnson");
-
-        Table.display("Tester", test);
-        CSV.export("Tester", test);
-        */
-
+        Report rpt = new Report(c1);
+        rpt.display();
+        rpt.exportCSV();
 
     }
 }
