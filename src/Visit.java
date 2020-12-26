@@ -74,7 +74,7 @@ public class Visit implements Serializable {
     }
 
     public String getTime() {
-        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("k:mm:ss");
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("kk:mm:ss");
         return dtf.format(this.dt);
     }
 

@@ -62,6 +62,7 @@ public class Initializer {
         for (int i = 0; i < 30; i++)
             diffSec[i] = random.nextInt(millisInDay);
         Arrays.sort(diffSec);
+
         for (int i = 0; i < 30; i++) {
             long newDT = curTime - diffSec[29-i];
             randomDTs[i] = LocalDateTime.ofInstant(Instant.ofEpochMilli(newDT), ZoneId.systemDefault());
