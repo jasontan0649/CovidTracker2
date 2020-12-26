@@ -22,7 +22,7 @@ public class Initializer {
 
     }
 
-    public static void preCust() {
+    private static void preCust() {
         new Customer("Johnson Smith","jsmith","0123456789","Normal");
         new Customer("Jackson Teng","jteng","0124567890","Normal");
         new Customer("Ahmad Mohd","mohdamd","0191234567","Normal");
@@ -30,14 +30,14 @@ public class Initializer {
         new Customer("Lim Ah Chong","ahchong","0183456789","Normal");
     }
 
-    public static void preShop() {
+    private static void preShop() {
         new Shop("KFC", "delicious","0312345678","Normal","Ken");
         new Shop("Texas", "chicken","0322345678","Normal","John");
         new Shop("Basket Robbin", "icecream","0332345678","Normal","Smith");
         new Shop("llaollao", "llaollao","0342345678","Normal","Elson");
     }
 
-    public static void preVisit() {
+    private static void preVisit() {
         LocalDateTime[] randomDTs = timeGene();
         final Random random = new Random();
         int CustAmt = Customer.custs.size();
@@ -50,7 +50,7 @@ public class Initializer {
         }
     }
 
-    public static LocalDateTime[] timeGene() {
+    private static LocalDateTime[] timeGene() {
         final Random random = new Random();
         final int millisInDay = 24*60*60*1000;
 

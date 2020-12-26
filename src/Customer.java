@@ -102,4 +102,11 @@ public class Customer implements Serializable, Role {
                 ", status='" + status + '\'' +
                 '}';
     }
+
+    public static Customer getCustByNumber (String number) {
+        for (Customer c : Customer.custs)
+            if (c.getPhone().equals(number))
+                return c;
+        return null;
+    }
 }
