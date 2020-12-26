@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Shop implements Serializable, Role{
+    private static final long serialVersionUID = 6529685098267757690L;
     public static ArrayList<Shop> shops = new ArrayList<Shop>();
 
     private static int count = 0;
@@ -112,4 +113,6 @@ public class Shop implements Serializable, Role{
                 ", manager='" + manager + '\'' +
                 '}';
     }
+
+
 }

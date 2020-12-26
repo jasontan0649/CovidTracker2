@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.ArrayList;
 
 public class Customer implements Serializable, Role {
+    private static final long serialVersionUID = 6523585098267757690L;
     private static int count = 0;
     public static ArrayList<Customer> custs = new ArrayList<Customer>();
 
