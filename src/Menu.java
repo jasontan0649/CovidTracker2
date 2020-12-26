@@ -54,9 +54,9 @@ public class Menu {
 
             int res = Input.inputRange(1,4);
             switch (res) {
-                case 1 : System.out.println("Check in function");
-                case 2 : System.out.println("View History function");
-                case 3 : System.out.println("View status function");
+                case 1 : System.out.println("Check in function"); break;
+                case 2 : System.out.println("View History function"); break;
+                case 3 : System.out.println("View status function"); break;
                 case 4 : return;
             }
 
