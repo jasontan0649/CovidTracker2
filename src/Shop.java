@@ -9,7 +9,6 @@ public class Shop implements Serializable, Role{
 
     private int id;
 
-    private String password;
     private String name;
     private String phone;
     private String status;
@@ -17,7 +16,6 @@ public class Shop implements Serializable, Role{
 
     public Shop(String name, String password, String phone, String status, String manager) {
         this.id = ++count;
-        setPassword(password);
         setName(name);
         setPhone(phone);
         setStatus(status);
@@ -62,14 +60,6 @@ public class Shop implements Serializable, Role{
         return id;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
     public String getName() {
         return name;
     }
@@ -106,7 +96,6 @@ public class Shop implements Serializable, Role{
     public String toString() {
         return "Shop{" +
                 "id=" + id +
-                ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", phone='" + phone + '\'' +
                 ", status='" + status + '\'' +
