@@ -52,15 +52,43 @@ public class Menu {
             System.out.println("3. View Status");
             System.out.println("4. LogOut");
 
-            int res = Input.inputRange(1,4);
-            switch (res) {
-                case 1 : System.out.println("Check in function"); break;
-                case 2 : System.out.println("View History function"); break;
-                case 3 : System.out.println("View status function"); break;
+            int choice = Input.inputRange(1,4);
+            switch (choice) {
+                case 1 : checkIn(c); break;
+                case 2 : viewHistory(c); break;
+                case 3 : viewStatus(c); break;
                 case 4 : return;
             }
-
             //done
         }
     }
+    
+    public static void checkIn(Customer c) {
+        System.out.println("Please select shop");
+        for (int i = 0; i < Shop.shops.size(); i++)
+            System.out.println(i+1 + ". " + Shop.shops.get(i).getName());
+        int choice = Input.inputRange(1, Shop.shops.size());
+
+        new Visit(c.getId(), choice);
+        System.out.println("New visit created \nPress 1 to continue");
+        Input.inputRange(1,1);
+    }
+    
+    public static void viewHistory(Customer c) {
+        Report rpt = new Report(c);
+        rpt.display();
+        System.out.println("\n\nDo you want to export to CSV ?");
+        System.out.println("1. Yes");
+        System.out.println("2. No");
+        int choice = Input.inputRange(1,2);
+        if (choice == 1)
+            rpt.exportCSV();
+    }
+    
+    public static void viewStatus(Customer c) {
+        System.out.println("Your status is " + c.getStatus());
+        System.out.println("Press 1 to continue");
+        Input.inputRange(1,1);
+    }
+    
 }
