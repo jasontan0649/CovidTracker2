@@ -6,8 +6,9 @@ public class Menu {
         System.out.println("Please select the following option");
         System.out.println("1. Login");
         System.out.println("2. Sign Up");
+        System.out.println("3. Exit Program");
 
-        return Input.inputRange(1,2);
+        return Input.inputRange(1,3);
     }
 
     public static Customer login() {
@@ -40,6 +41,12 @@ public class Menu {
         password = input.nextLine();
         Customer c = new Customer(name, password, phone, "Normal");
         return c;
+    }
+
+    public static void main (Customer c) {
+        System.out.println("Welcome, " + c.getName() + "/n");
+        System.out.println("Please select");
+        //here
     }
 
 }

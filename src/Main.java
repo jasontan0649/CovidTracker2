@@ -6,13 +6,14 @@ public class Main {
         Initializer.init();
         while (true) {
             int choice = Menu.landing();
-            Customer cust;
+            Customer cust = null;
             if (choice == 1)
                 cust = Menu.login();
             else if (choice == 2)
                 cust = Menu.signUp();
-            //Debug
-            System.out.println(cust);
+            else
+                return;
+            Menu.main(cust);
         }
     }
 }
