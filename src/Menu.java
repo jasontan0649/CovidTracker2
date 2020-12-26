@@ -45,7 +45,7 @@ public class Menu {
 
     public static void main (Customer c) {
         while (true) {
-            System.out.println("Welcome, " + c.getName() + "/n");
+            System.out.println("Welcome, " + c.getName() + "\n");
             System.out.println("Please select");
             System.out.println("1. Check In");
             System.out.println("2. View History");
